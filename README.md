@@ -1,20 +1,5 @@
 ### Angular Bootstrap Toggle - [AngularJS](http://angularjs.org/) version of [Bootstrap Toggle](http://www.bootstraptoggle.com/)
 
-### Quick links
-- [Demo](#demo)
-- [Installation](#installation)
-    - [Manual](#manual-download)
-- [Support](#support)
-    - [FAQ](#faq)
-    - [Supported browsers](#supported-browsers)
-    - [Need help?](#need-help)
-    - [Found a bug?](#found-a-bug)
-- [Contributing to the project](#contributing-to-the-project)
-
-# Demo
-
-Do you want to see directive in action? Visit http://zettacristiano.github.io/zl-angular-bootstrap-toggle/!
-
 # Installation
 
 Installation is easy as UI Bootstrap has minimal dependencies - only the AngularJS and Twitter Bootstrap's CSS are required.
