@@ -45,7 +45,7 @@
      * Description: Appends the value to the class attribute of the toggle.
      * This can be used to apply custom styles. Refer to Custom Styles for reference.
      */
-    style: '',
+    styleToogle: '',
     /**
      * Type: boolean
      * Default: false
@@ -64,7 +64,7 @@
         };
 
       // Configuration attributes
-      angular.forEach(['on', 'off', 'size', 'onstyle', 'offstyle', 'style', 'disable'], function (key, index) {
+      angular.forEach(['on', 'off', 'size', 'onstyle', 'offstyle', 'styleToogle', 'disable'], function (key, index) {
         self[key] = angular.isDefined($attrs[key]) ?
           (index < 7 ? $interpolate($attrs[key])($scope.$parent) : $scope.$parent.$eval($attrs[key])) :
           zlToggleConfig[key];
@@ -130,9 +130,9 @@
           this.isOn = false;
         }
         if (this.isOn) {
-          $scope.wrapperClass = [self.onstyle, self.size, self.style, (self.disable ? 'disabled' : '')];
+          $scope.wrapperClass = [self.onstyle, self.size, self.styleToogle, (self.disable ? 'disabled' : '')];
         } else {
-          $scope.wrapperClass = [self.offstyle, 'off ', self.size, self.style, (self.disable ? 'disabled' : '')];
+          $scope.wrapperClass = [self.offstyle, 'off ', self.size, self.styleToogle, (self.disable ? 'disabled' : '')];
         }
       };
 
@@ -153,7 +153,7 @@
         });
       });
 
-      angular.forEach(['on', 'off', 'size', 'onstyle', 'offstyle', 'style', 'disable'], function (key) {
+      angular.forEach(['on', 'off', 'size', 'onstyle', 'offstyle', 'styleToogle', 'disable'], function (key) {
         $attrs.$observe(key, function (val) {
           if (self[key] !== val) {
             self[key] = val;

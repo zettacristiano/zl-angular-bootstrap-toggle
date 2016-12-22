@@ -8,7 +8,7 @@ var plumber = require('gulp-plumber');
 var runSequence = require('run-sequence');
 var jshint = require('gulp-jshint');
 var less = require('gulp-less');
-var minifyCSS = require('gulp-minify-css');
+var cleanCSS = require('gulp-clean-css');
 /**
  * File patterns
  **/
@@ -34,7 +34,7 @@ gulp.task('less', function () {
       paths: [path.join(__dirname, 'less', 'includes')]
     }))
     .pipe(gulp.dest('./dist/'))
-    .pipe(minifyCSS({compatibility: 'ie8'}))
+    .pipe(cleanCSS({compatibility: 'ie8'}))
     .pipe(rename(function (path) {
       path.basename += '.min';
     }))
